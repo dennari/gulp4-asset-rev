@@ -1,0 +1,19 @@
+
+
+/////////////////////////////////////////////
+// THIS FILE IS FIRST PARSED BY HANDLEBARS //
+/////////////////////////////////////////////
+
+
+
+$asset-files: {{{assetFilesScss false}}};
+$asset-files-rev: {{{assetFilesScss true}}};
+
+@function imagePath($img) {
+  @return "/images/#{nth($asset-files-rev,index($asset-files,$img))}";
+}
+
+
+body {
+  background: url(imagePath('logo.svg')) 50% 50% no-repeat;
+}
